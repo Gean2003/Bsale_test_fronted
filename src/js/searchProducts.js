@@ -10,8 +10,9 @@ const inputSearch = (input, button, printProducts) => {
 export const SearchByName = (input, printProducts) => {
     const url = `https://bsaletestbackend-production.up.railway.app/api/products/q?name=${input}`
     axios.get(url)
-	.then(res => {
-let data = {
+	    .then(res => {
+
+    let data = {
 		result: res.data
 	    }
 	    printProducts(data)

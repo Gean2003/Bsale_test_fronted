@@ -9,25 +9,33 @@
 <body>
     <header class="px-3 py-3 max-w-[1920px] mx-auto">
 	<nav class="w-full h-[70px] px-4 flex rounded-full items-center justify-between" >
-		<h1 class="text-4xl font-bold">Bsale_test</h1>
+		    <h1 class="text-4xl font-bold">Bsale_test</h1>
 	    <ul class="flex items-center justify-end h-full px-4 py-3 gap-5" >
 	        <li><a href="#"><i class='text-2xl bx bx-cart' ></i></a></li>
 	    </ul>
 	</nav>
+
     </header>
 
-    <form class="flex justify-center w-full mt-4 text-center max-w-[1920px] mx-auto" >
-	<input class="w-[500px]  px-2 py-2 border outline-none rounded-md"   id="input" type="text" placeholder="Search products">
-	<button id="button"><i class='px-3 py-3 text-xl w-[50px] text-white bg-red-500 rounded-md bx bx-search'></i></button>
+    <form class="flex justify-center items-center w-full mt-4 text-center max-w-[1920px] mx-auto" id = "form" >
+        <select id="filter" class="mr-[100px] w-auto h-auto  justify-end py-2 px-2 rounded-full  flex flex-col gap-3" >
+            <option value="0">All products</option>
+            
+        </select>
+
+	    <input class="w-[500px] h-[50px] px-2 py-2 border outline-none rounded-md"   id="input" type="text" placeholder="Search products">
+	    <button id="button"><i class='px-3 py-3 text-xl w-[50px] text-white bg-red-500 rounded-md bx bx-search'></i></button>
+
     </form>
 
     <main class="max-w-[1920px] flex flex-wrap items-center justify-center w-full h-auto px-3 py-3 mt-5 gap-5" id="main">
     </main>
 
     <div class="flex justify-center py-3 gap-5 max-w-[1920px] mx-auto">
-	<button id="btn_previous"><i class="px-1 py-1 text-2xl text-white bg-red-500 rounded-full aspect-square w-[40px] bx bx-left-arrow-alt bx-flashing" ></i></button>
-	<button id="btn_next"><i class='px-1 py-1 text-2xl text-white bg-red-500 rounded-full bx bx-right-arrow-alt w-[40px] bx-flashing'></i></button>
+	    <button id="btn_previous"><i class="px-1 py-1 text-2xl text-white bg-red-500 rounded-full aspect-square w-[40px] bx bx-left-arrow-alt bx-flashing" ></i></button>
+	    <button id="btn_next"><i class='px-1 py-1 text-2xl text-white bg-red-500 rounded-full bx bx-right-arrow-alt w-[40px] bx-flashing'></i></button>
     </div>
+
 </body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
