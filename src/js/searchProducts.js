@@ -1,3 +1,5 @@
+const next = document.getElementById('btn_next');
+const previous = document.getElementById('btn_previous');
 
 const inputSearch = (input, button, printProducts) => {
     button.addEventListener('click', (e) => {
@@ -8,15 +10,13 @@ const inputSearch = (input, button, printProducts) => {
 }
 
 export const SearchByName = (input, printProducts) => {
-    const url = `https://bsaletestbackend-production.up.railway.app/api/products/q?name=${input}`
+    const url = `https://bsale-backend-vyob.onrender.com/api/products/search?name=${input}`
     axios.get(url)
-	    .then(res => {
-
-    let data = {
-		result: res.data
-	    }
-	    printProducts(data)
-	}  )
+	    .then(res => { 
+            printProducts(res.data)
+            next.classList.add("hidden")
+            previous.classList.add("hidden")
+            } )
 	.catch(err => console.log(err))
 }
 

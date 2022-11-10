@@ -1,4 +1,8 @@
+const next = document.getElementById('btn_next');
+const previous = document.getElementById('btn_previous');
+
 import { getProducts, printProducts } from "./main.js";
+
 const filter = document.querySelector('#filter')
 
 export const getCatetoryId = () => {
@@ -13,7 +17,7 @@ export const getCatetoryId = () => {
 }
 
 const filterCategory = (id) => {
-    const url = 'https://bsaletestbackend-production.up.railway.app/api/products?perpage=9999'
+    const url = 'https://bsale-backend-vyob.onrender.com/api/products?limit=999'
     axios.get(url)
         .then(res => {
             let data = res.data.result
@@ -21,6 +25,8 @@ const filterCategory = (id) => {
                 result: data.filter( p => p.category == id )
             } 
             printProducts(obj)
+            next.classList.add("hidden")
+            previous.classList.add("hidden")
              // console.log(obj);
         })
             .catch(err => console.log(err))

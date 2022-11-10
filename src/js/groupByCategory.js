@@ -1,14 +1,16 @@
 import {   getCatetoryId } from "./searchByCategory.js"
 
+//PERF: funcion para buscar por categoria
 export const getCategory = (list) => {
 
-    const url = 'https://bsaletestbackend-production.up.railway.app/api/products/category'
+    const url = 'https://bsale-backend-vyob.onrender.com/api/categories'
     axios.get(url)
-         .then(res => printLists(res.data, list))
+         .then(res => printLists(res.data.result, list))
          .catch(err => console.log(err))
 
 }
 
+//PERF: pintar categorias en una lista
  const printLists = (data, list) => {
 
     for (let i = 0; i <data.length ; i++) {
