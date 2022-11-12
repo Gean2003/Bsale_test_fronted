@@ -9,9 +9,12 @@ export const getCatetoryId = () => {
 
     filter.addEventListener('change' , (evt) => {
         const id = Number(evt.target.value)
-        filterCategory(id)
+        if (id === 0){
+            getProducts()
+        } else{
+            filterCategory(id)
+        }
 
-        if (id === 0) getProducts()
     })
 
 }
