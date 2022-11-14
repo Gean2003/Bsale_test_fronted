@@ -60,9 +60,9 @@ export const printProducts = products =>{
 inputSearch(input, button, printProducts)
 
 //PERF: funciones para el paginado
-nextPage(next, printProducts)
+nextPage(printProducts)
 
-previousPage(previous, printProducts)
+previousPage(printProducts)
 
     
 
